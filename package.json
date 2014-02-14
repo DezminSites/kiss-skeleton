@@ -1,0 +1,14 @@
+{
+  "name": "kiss-skeleton",
+  "version": "0.0.0",
+  "description": "Firs skeleton for kiss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DezminSites/kiss-skeleton"
+  },
+  "author": "Dezmin <contato@dezmin.com.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DezminSites/kiss-skeleton/issues"
+  }
+}

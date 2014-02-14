@@ -1,0 +1,14 @@
+{
+  "name": "main",
+  "version": "0.0.0",
+  "author": "",
+  "description": "",
+  "repository": "",
+  "keywords": [],
+  "dependencies" : {},
+  "main" : [
+      "js/main.js"
+  ],
+  "license": "MIT",
+  "engines": {}
+}
