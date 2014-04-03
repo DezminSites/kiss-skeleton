@@ -12,6 +12,9 @@ var require = function(name){
     }
 }
 
+
+require.prefix = window.location.pathname
+
 require.loadPkg = function(name) {
     require.required.loading.push(name)
     for (module in require.required.stack){
@@ -20,7 +23,7 @@ require.loadPkg = function(name) {
             return
         }
     }
-    $.getJSON('/modules/'+name+'/package.json')
+    $.getJSON(require.prefix + '/modules/'+name+'/package.json')
     .fail(function(){
         console.log('Module '+name+' not installed!');
     })
@@ -69,7 +72,7 @@ require.loadModule = function(name,data) {
         var url = data_urls[el];
         if ($.inArray(url,require.required.files) < 0){
             //Get proper file
-            $.get('/modules/'+name+'/'+data_urls[el])
+            $.get(require.prefix + '/modules/'+name+'/'+data_urls[el])
             .done(function(data) {
                 url = this.url;
                 var ext = url.split('.').pop();
@@ -142,7 +145,7 @@ require.required = {
 */
 var script = document.createElement("script");
 script.type = "text/javascript";
-script.src = '/modules/clirequire/jquery.js';
+script.src = require.prefix + '/modules/clirequire/jquery.js';
 script.onload = script.onreadystatechange = function(){
     if (!script.readyState || (script.readyState === 'complete' || script.readyState === 'loaded')) {
         script.onload = script.onreadystatechange = null
