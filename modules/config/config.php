@@ -3,21 +3,21 @@
 session_start();
 
 //Config
-if ($_SERVER["SERVER_NAME"] == '') { //Development
+if ($_SERVER["SERVER_NAME"] == '##localserver##') { //Development
     $dbhost = 'localhost';
     $dbuser = 'root';
     $dbname = '';
     $dbpassword = '';
 } else { //Production
     $dbhost = 'localhost';
-    $dbuser = '';
-    $dbname = '';
-    $dbpassword = '';
+    $dbuser = '##dbuser##';
+    $dbname = '##dbname##';
+    $dbpassword = '##dbpass##';
 }
 
 //Define domain
 define('DOMAIN', $_SERVER["HTTP_HOST"]);
-define('URL', "");
+define('URL', "##url##");
 
 //Max items per page
 $per_page = 10;
@@ -40,5 +40,5 @@ R::freeze( true );
 
 //Set local
 $local = array(
-    "name" => ""
+    "name" => "##name##"
 );
