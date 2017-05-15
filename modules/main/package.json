@@ -5,9 +5,11 @@
   "description": "",
   "repository": "",
   "keywords": [],
-  "dependencies" : {},
+  "dependencies" : {
+      "materialize" : "/modules/materialize"
+  },
   "main" : [
-      "js/main.js"
+      "js/init.js"
   ],
   "license": "MIT",
   "engines": {}

@@ -1,0 +1,9 @@
+{
+    "name": "gc_config",
+    "type": "library",
+    "description": "Guia Cidades config files",
+    "keywords": ["GC","Config"],
+    "require": {
+        "php": ">=5.3.0"
+    }
+}

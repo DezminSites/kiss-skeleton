@@ -1,0 +1,9 @@
+{
+    "name": "smartoptimizer",
+    "type": "library",
+    "description": "SmartOptimizer",
+    "keywords": ["MyCFC","Smart"],
+    "require": {
+        "php": ">=5.3.0"
+    }
+}

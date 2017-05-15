@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    
+    {{^ img }}
+    <meta property="og:image" content="{{url}}/modules/sc_images/logo.png" />
+    <meta property="og:image:width" content="592" />
+    <meta property="og:image:height" content="518" />
+    <meta property="og:url" content="{{url}}" />
+    {{/ img }}
+    {{# img }}
+    <meta property="og:image" content="{{url}}/modules/sc_images/ads/{{ img }}.jpg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="420" />
+    <meta property="og:url" content="{{url}}/share/{{ img }}" />
+    {{/ img }}
+    <meta property="og:description" content="{{desc}}" />
+    <meta property="og:title" content="{{title}}" />
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PremiadoPalpite">
+    <meta name="twitter:creator" content="@PremiadoPalpite">
+    <meta name="twitter:title" content="{{title}}">
+    <meta name="twitter:description" content="{{desc}}">
+    {{^ img }}
+    <meta name="twitter:image" content="{{url}}/modules/sc_images/logo.png">  
+    {{/ img }}
+    {{# img }}
+    <meta name="twitter:image" content="{{url}}/modules/sc_images/ads/{{ img }}.jpg">  
+    {{/ img }}
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{{title}}</title>
+
+    <!-- CSS  -->
+    {{>css}}
+</head>
+
+<body>
+    <header>
+        {{>menu}}
+
+        <div class="section no-pad-bot tinted-image" id="index-banner">
+            <div class="container center">
+                <img src="/modules/sc_images/logo.png" class="responsive-img" width="400" alt="{{name}}">
+                <br>
+                <br>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+              <div class="col s12 l9">

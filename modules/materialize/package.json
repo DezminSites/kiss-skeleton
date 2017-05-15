@@ -1,0 +1,15 @@
+{
+  "name": "materialize-css",
+  "description": "Builds Materialize distribution packages",
+  "author": "Alvin Wang, Alan Chang",
+  "url": "http://materializecss.com/",
+  "version": "0.97.6",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Dogfalo/materialize.git"
+  },
+  "dependencies": {
+      "mdi" : "/modules/mdi"
+  },
+  "main":["js/materialize.min.js"]
+}

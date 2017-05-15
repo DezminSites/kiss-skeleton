@@ -1,0 +1,9 @@
+{
+    "name": "mycfc_models",
+    "type": "library",
+    "description": "MyCFC models files",
+    "keywords": ["MyCFC","orm"],
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
