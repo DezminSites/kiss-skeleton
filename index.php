@@ -23,6 +23,7 @@ $m = new Mustache_Engine(array(
 
 $app->get('/',function(){
     global $m, $path, $local;
+    $context = array();
 //    ob_start();
 //    include('./modules/xxx/rest/index.php');
 //    $context = ob_get_contents(); 
@@ -32,7 +33,6 @@ $app->get('/',function(){
     $context = (array_merge($local,$context,array("title" => $local["name"])));
     echo $m->render($tpl,$context); 
 });
-
 
     
 $app->run();
