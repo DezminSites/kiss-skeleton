@@ -34,5 +34,10 @@ $app->get('/',function(){
     echo $m->render($tpl,$context); 
 });
 
-    
+//Include modules
+$modules = json_decode(file_get_contents($path . 'config/modules.json'));
+foreach($modules as $module){
+    include ($path . 'app_'.$module.'/index.php');
+}
+   
 $app->run();

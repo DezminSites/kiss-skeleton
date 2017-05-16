@@ -41,5 +41,6 @@ R::freeze( true );
 //Set local
 $local = array(
     "name" => "##name##",
-    "desc" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vestibulum velit augue, vestibulum molestie justo blandit in. Curabitur ut lacus nec est sagittis vehicula. Vestibulum consectetur nisl hendrerit nulla tempor scelerisque."
+    "desc" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vestibulum velit augue, vestibulum molestie justo blandit in. Curabitur ut lacus nec est sagittis vehicula. Vestibulum consectetur nisl hendrerit nulla tempor scelerisque.",
+    "year" => date('Y')
 );
