@@ -39,5 +39,13 @@ $modules = json_decode(file_get_contents($path . 'config/modules.json'));
 foreach($modules as $module){
     include ($path . 'app_'.$module.'/index.php');
 }
+
+$app->notFound(function () {
+    global $m, $local;
+    $context = array();
+    $tpl = file_get_contents('views/error.html');
+    $context = (array_merge($local,$context,array("title" => "Página não encontrada - " . $local["name"])));
+    echo $m->render($tpl,$context); 
+});
    
 $app->run();
