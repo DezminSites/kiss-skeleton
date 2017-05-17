@@ -43,7 +43,7 @@ foreach($modules as $module){
 $app->notFound(function () {
     global $m, $local;
     $context = array();
-    $tpl = file_get_contents('/modules/themes/'.$local['theme'].'/views/error.html');
+    $tpl = file_get_contents(dirname(__FILE__).'/modules/themes/'.$local['theme'].'/views/error.html');
     $context = (array_merge($local,$context,array("title" => "Página não encontrada - " . $local["name"])));
     echo $m->render($tpl,$context); 
 });
