@@ -6,30 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
     
     {{^ img }}
-    <meta property="og:image" content="{{url}}/modules/sc_images/logo.png" />
+    <meta property="og:image" content="{{url}}/modules/themes/{{theme}}/img/logo.png" />
     <meta property="og:image:width" content="592" />
     <meta property="og:image:height" content="518" />
     <meta property="og:url" content="{{url}}" />
     {{/ img }}
     {{# img }}
-    <meta property="og:image" content="{{url}}/modules/sc_images/ads/{{ img }}.jpg" />
+    <meta property="og:image" content="{{url}}/modules/themes/{{theme}}/img/logo.png" />
     <meta property="og:image:width" content="800" />
     <meta property="og:image:height" content="420" />
-    <meta property="og:url" content="{{url}}/share/{{ img }}" />
+    <meta property="og:url" content="{{url}}" />
     {{/ img }}
     <meta property="og:description" content="{{desc}}" />
     <meta property="og:title" content="{{title}}" />
     
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@PremiadoPalpite">
-    <meta name="twitter:creator" content="@PremiadoPalpite">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:creator" content="">
     <meta name="twitter:title" content="{{title}}">
     <meta name="twitter:description" content="{{desc}}">
     {{^ img }}
-    <meta name="twitter:image" content="{{url}}/modules/sc_images/logo.png">  
+    <meta name="twitter:image" content="{{url}}/modules/themes/{{theme}}/img/logo.png">  
     {{/ img }}
     {{# img }}
-    <meta name="twitter:image" content="{{url}}/modules/sc_images/ads/{{ img }}.jpg">  
+    <meta name="twitter:image" content="{{url}}/modules/themes/{{theme}}/img/logo.png">  
     {{/ img }}
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -45,7 +45,7 @@
 
         <div class="section no-pad-bot tinted-image" id="index-banner">
             <div class="container center">
-                <img src="/modules/main/img/logo.png" class="responsive-img" width="400" alt="{{name}}">
+                <img src="/modules/themes/{{theme}}/img/logo.png" class="responsive-img" width="400" alt="{{name}}">
                 <br>
                 <br>
             </div>

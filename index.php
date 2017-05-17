@@ -18,7 +18,7 @@ $app = new \Slim\Slim(array(
 //Init Mustache
 $m = new Mustache_Engine(array(
     'cache' => dirname(__FILE__).'/cache/mustache/',
-    'partials_loader' => new Mustache_Loader_FilesystemLoader(dirname(__FILE__).'/views/', array('extension' => '.html')),
+    'partials_loader' => new Mustache_Loader_FilesystemLoader(dirname(__FILE__).'/modules/themes/'.$config['theme'].'/views/', array('extension' => '.html')),
 ));
 
 $app->get('/',function(){
@@ -29,13 +29,13 @@ $app->get('/',function(){
 //    $context = ob_get_contents(); 
 //    $context = json_decode($context,true);
 //    ob_get_clean();
-    $tpl = file_get_contents('./views/home.html');
+    $tpl = file_get_contents(dirname(__FILE__).'/modules/themes/'.$local['theme'].'/views/home.html');
     $context = (array_merge($local,$context,array("title" => $local["name"])));
     echo $m->render($tpl,$context); 
 });
 
 //Include modules
-$modules = json_decode(file_get_contents($path . 'config/modules.json'));
+$modules = $config['modules'];
 foreach($modules as $module){
     include ($path . 'app_'.$module.'/index.php');
 }
@@ -43,7 +43,7 @@ foreach($modules as $module){
 $app->notFound(function () {
     global $m, $local;
     $context = array();
-    $tpl = file_get_contents('views/error.html');
+    $tpl = file_get_contents('/modules/themes/'.$local['theme'].'/views/error.html');
     $context = (array_merge($local,$context,array("title" => "Página não encontrada - " . $local["name"])));
     echo $m->render($tpl,$context); 
 });

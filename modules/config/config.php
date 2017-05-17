@@ -38,9 +38,13 @@ require $path . 'rb_models/models.php';
 R::setup("mysql:host=$dbhost;dbname=$dbname", "$dbuser", "$dbpassword");
 R::freeze( true );
 
+//JSON config
+$config = json_decode(file_get_contents(dirname(__FILE__) . './config.json'),true);
+
 //Set local
 $local = array(
     "name" => "##name##",
     "desc" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vestibulum velit augue, vestibulum molestie justo blandit in. Curabitur ut lacus nec est sagittis vehicula. Vestibulum consectetur nisl hendrerit nulla tempor scelerisque.",
-    "year" => date('Y')
+    "year" => date('Y'),
+    "theme" => $config['theme']
 );
